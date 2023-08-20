@@ -14,7 +14,7 @@ sshman is a simple SSH manager which creates and manages sessions.
 
 %prep
 # Ensuring the installation is fresh.
-unlink /usr/bin/sshman
+[ -f "/usr/bin/sshman" ] && unlink /usr/bin/sshman
 
 # Making directories
 mkdir -p $HOME/.sshm/.bin
