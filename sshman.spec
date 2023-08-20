@@ -25,7 +25,6 @@ wget %{url} -O %{_builddir}/linux-snow-dome.tar.gz
 tar xvfz %{_builddir}/linux-snow-dome.tar.gz --directory %{_builddir}
 
 mv %{_builddir}/sshman $HOME/.sshm/.bin/
-ln -s $HOME/.sshm/.bin/sshman /usr/bin
 
 %install
 mkdir -p %{buildroot}%{_bindir}
