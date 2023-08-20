@@ -1,5 +1,5 @@
 Name:     sshman
-Version:  0.2.5
+Version:  0.2.4
 Release:  1%{?dist}
 Summary:  A SSH manager based on sessions
 License:  MIT
@@ -14,7 +14,7 @@ sshman is a simple SSH manager which creates and manages sessions.
 
 %prep
 # Ensuring the installation is fresh.
-sudo unlink /usr/bin/sshman
+unlink /usr/bin/sshman
 
 # Making directories
 mkdir -p $HOME/.sshm/.bin
@@ -25,7 +25,7 @@ wget %{url} -O %{_builddir}/linux-snow-dome.tar.gz
 tar xvfz %{_builddir}/linux-snow-dome.tar.gz --directory %{_builddir}
 
 mv %{_builddir}/sshman $HOME/.sshm/.bin/
-sudo ln -s $HOME/.sshm/.bin/sshman /usr/bin
+ln -s $HOME/.sshm/.bin/sshman /usr/bin
 
 %install
 mkdir -p %{buildroot}%{_bindir}
@@ -39,15 +39,8 @@ cp -p $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 %post
 
 %changelog
-* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com> 0.2.5-1
-- Fixed version (smmc.auth@gmail.com)
-- p (smmc.auth@gmail.com)
-
 * Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
-- p (smmc.auth@gmail.com)
-
-* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
-- p (smmc.auth@gmail.com)
+- please god (smmc.auth@gmail.com)
 
 * Sat Aug 19 2023 Auth P <smmc.auth@gmail.com>
 - Initial version of the package
