@@ -7,7 +7,7 @@ URL:      https://github.com/auth-xyz/sshman
 BuildRequires: python3
 BuildRequires: wget
 
-%define url https://github.com/auth-xyz/sshman/releases/download/v0.2.4/linux-snow-dome.tar.gz
+%define url https://github.com/auth-xyz/sshman/releases/download/v0.3.0/linux-vancouver.tar.gz
 
 %description
 sshman is a simple SSH manager which creates and manages sessions.
