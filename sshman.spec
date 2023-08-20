@@ -39,6 +39,12 @@ cp -p $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 %post
 
 %changelog
+* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
+- p (smmc.auth@gmail.com)
+
+* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
+- p (smmc.auth@gmail.com)
+
 * Sat Aug 19 2023 Auth P <smmc.auth@gmail.com>
 - Initial version of the package
 
