@@ -1,5 +1,5 @@
 Name:     sshman
-Version:  0.3.2-2
+Version:  0.3.2
 Release:  1%{?dist}
 Summary:  A SSH manager based on sessions
 License:  MIT
