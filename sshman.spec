@@ -1,5 +1,5 @@
 Name:     sshman
-Version:  0.3.0
+Version:  0.3.2
 Release:  1%{?dist}
 Summary:  A SSH manager based on sessions
 License:  MIT
@@ -38,6 +38,9 @@ cp -p $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 %post
 
 %changelog
+* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com> 0.3.2-1
+- Updated to new version (smmc.auth@gmail.com)
+
 * Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com> 0.3.0-1
 - Changed the spec for the new version (smmc.auth@gmail.com)
 - OK NOW I FIXED IT (smmc.auth@gmail.com)
