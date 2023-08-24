@@ -8,6 +8,7 @@ BuildRequires: python3
 BuildRequires: wget
 
 %define url https://github.com/auth-xyz/sshman/releases/download/v0.3.2/linux-vancouver.tar.gz
+%define package vancouver
 
 %description
 sshman is a simple SSH manager which creates and manages sessions.
@@ -21,14 +22,14 @@ mkdir -p $HOME/.sshm/.bin
 mkdir -p $HOME/.sshm/.cache
 
 # Downloading latest version and extracting
-wget %{url} -O %{_builddir}/linux-snow-dome.tar.gz
+wget %{url} -O %{_builddir}/linux-%{package}.tar.gz
 tar xvfz %{_builddir}/linux-snow-dome.tar.gz --directory %{_builddir}
 
 mv %{_builddir}/sshman $HOME/.sshm/.bin/
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-/bin/ln -s $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
+/usr/bin/ln -s $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 
 
 %files
@@ -43,33 +44,9 @@ umask 007
 %postun
 umask 007
 /sbin/ldconfig > /dev/null 2>&1
+/usr/bin/rm %{_builddir}/linux-%{package}.tar.gz
 
 
 %changelog
 * Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
 - Should fix the --update feature on release (authenticover@gmail.com)
-
-* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
-- Should fix the --update feature on release (authenticover@gmail.com)
-
-* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com> 0.3.2-1
-- Updated to new version (smmc.auth@gmail.com)
-
-* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com> 0.3.0-1
-- Changed the spec for the new version (smmc.auth@gmail.com)
-- OK NOW I FIXED IT (smmc.auth@gmail.com)
-- Now the thing works i think (smmc.auth@gmail.com)
-- please (smmc.auth@gmail.com)
-- big update to 0.3.0 (smmc.auth@gmail.com)
-* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
-- Changed the spec for the new version (smmc.auth@gmail.com)
-- OK NOW I FIXED IT (smmc.auth@gmail.com)
-- Now the thing works i think (smmc.auth@gmail.com)
-- please (smmc.auth@gmail.com)
-
-* Sun Aug 20 2023 auth-xyz <smmc.auth@gmail.com>
-- please god (smmc.auth@gmail.com)
-
-* Sat Aug 19 2023 Auth P <smmc.auth@gmail.com>
-- Initial version of the package
-
