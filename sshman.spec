@@ -28,7 +28,7 @@ mv %{_builddir}/sshman $HOME/.sshm/.bin/
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-cp -p $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
+/bin/ln -s $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 
 
 %files
@@ -36,6 +36,14 @@ cp -p $HOME/.sshm/.bin/sshman %{buildroot}%{_bindir}/sshman
 /usr/bin/sshman
 
 %post
+umask 007
+/sbin/ldconfig > /dev/null 2>&1
+
+
+%postun
+umask 007
+/sbin/ldconfig > /dev/null 2>&1
+
 
 %changelog
 * Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com> 0.3.2-1
