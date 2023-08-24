@@ -1,5 +1,5 @@
 Name:     sshman
-Version:  0.3.2
+Version:  0.3.2-2
 Release:  1%{?dist}
 Summary:  A SSH manager based on sessions
 License:  MIT
@@ -46,6 +46,12 @@ umask 007
 
 
 %changelog
+* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
+- Should fix the --update feature on release (authenticover@gmail.com)
+
+* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
+- Should fix the --update feature on release (authenticover@gmail.com)
+
 * Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com> 0.3.2-1
 - Updated to new version (smmc.auth@gmail.com)
 
