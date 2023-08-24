@@ -49,4 +49,10 @@ umask 007
 
 %changelog
 * Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
+- Might have fixed some issues. building lcoally works (smmc.auth@gmail.com)
+- S (smmc.auth@gmail.com)
+- A (smmc.auth@gmail.com)
+- Should fix the --update feature on release (authenticover@gmail.com)
+
+* Thu Aug 24 2023 auth-xyz <smmc.auth@gmail.com>
 - Should fix the --update feature on release (authenticover@gmail.com)
