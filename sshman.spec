@@ -11,7 +11,7 @@ BuildRequires: wget
 %define package vancouver
 
 %description
-sshman is a simple SSH manager which creates and manages sessions.
+SSHMan is a Secure Shell (SSH) manager, which allows the user to generate sessions which can be shared with an user and be connected with ease
 
 %prep
 # Ensuring the installation is fresh.
